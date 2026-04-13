@@ -3,16 +3,16 @@ using OpenTabletDriver.Plugin;
 using OpenTabletDriver.Plugin.Attributes;
 using OpenTabletDriver.Plugin.Output;
 using OpenTabletDriver.Plugin.Tablet;
-using PenDragScroll.Native.Linux;
+using PenDragScroll.Native;
 using PenDragScroll.State;
 
 namespace PenDragScroll.Filters;
 
 [PluginName("Pen Drag Scroll")]
-[SupportedPlatform(PluginPlatform.Linux)]
+[SupportedPlatform(PluginPlatform.Linux | PluginPlatform.Windows)]
 public sealed class PenDragScrollFilter : IPositionedPipelineElement<IDeviceReport>, IDisposable
 {
-    private readonly LinuxMouseWheel _wheel = new();
+    private readonly IMouseWheel _wheel = MouseWheelFactory.Create();
     private bool _scrolling;
     private Vector2 _anchorPosition;
     private Vector2 _lastPosition;

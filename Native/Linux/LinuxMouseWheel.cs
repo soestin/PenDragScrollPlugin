@@ -2,7 +2,7 @@ using PenDragScroll.Native.Linux.Evdev;
 
 namespace PenDragScroll.Native.Linux;
 
-internal sealed class LinuxMouseWheel : IDisposable
+internal sealed class LinuxMouseWheel : IMouseWheel
 {
     private readonly EvdevDevice _device;
     private bool _dirty;

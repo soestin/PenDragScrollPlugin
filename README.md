@@ -1,6 +1,10 @@
 # Pen Drag Scroll Plugin for OpenTabletDriver
 
-A small Linux-only OpenTabletDriver plugin that turns a pen button into a **hold-to-scroll modifier**.
+> [!WARNING]
+> This project was partially vibecoded because I needed this functionality for myself and wanted a working solution quickly.
+> I'm sharing it publicly in case someone else wants to use it, improve it, or adapt it for their own OpenTabletDriver setup.
+
+A small OpenTabletDriver plugin for **Linux and Windows** that turns a pen button into a **hold-to-scroll modifier**.
 
 While the modifier is held, pen movement is converted into high-resolution mouse wheel scrolling instead of normal cursor movement.
 
@@ -40,10 +44,10 @@ The active config was set up like this:
 - `metadata.json` - OTD plugin metadata
 
 ## Requirements
-- Linux
+- Linux or Windows
 - OpenTabletDriver `0.6.6.2`
 - .NET 8 SDK
-- permissions for Linux virtual input / uinput as required by your setup
+- on Linux: permissions for virtual input / uinput as required by your setup
 
 ## Build
 Example using the local SDK path already used during setup:
@@ -119,18 +123,13 @@ If scrolling feels reversed:
 - `AnchorCursor = true`: keep cursor fixed while scrolling
 - `AnchorCursor = false`: allow cursor to move while also scrolling
 
+## Platform notes
+- **Linux**: uses evdev/uinput high-resolution wheel events
+- **Windows**: uses `SendInput` wheel events
+
 ## Known limitations
-- Linux only
-- uses evdev/uinput for wheel emission
 - behavior may vary slightly depending on compositor/app support
 - this is a practical workaround for global drag-scroll, not native tablet-stack support in every environment
 
-## Repo setup
-This folder has been initialized as a git repository.
-
-Suggested first commit:
-
-```bash
-git add .
-git commit -m "Initial Pen Drag Scroll plugin"
-```
+## License
+This project is licensed under the MIT License. See [`LICENSE`](./LICENSE).
