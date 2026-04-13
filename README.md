@@ -1,8 +1,7 @@
 # Pen Drag Scroll Plugin for OpenTabletDriver
 
 > [!WARNING]
-> This project was partially vibecoded because I needed this functionality for myself and wanted a working solution quickly.
-> I'm sharing it publicly in case someone else wants to use it, improve it, or adapt it for their own OpenTabletDriver setup.
+> This project was partially vibecoded because I needed this functionality quickly for myself, but it is fully functional and I'm sharing it publicly in case others find it useful.
 
 A small OpenTabletDriver plugin for **Linux and Windows** that turns a pen button into a **hold-to-scroll modifier**.
 

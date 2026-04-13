@@ -1,9 +1,10 @@
 {
   "Name": "Pen Drag Scroll",
-  "Owner": "local",
-  "Description": "Hold a pen button and turn pen movement into global high-resolution scrolling on Linux.",
+  "Owner": "soestin",
+  "Description": "Hold a pen button and turn pen movement into global high-resolution scrolling on Linux and Windows.",
   "PluginVersion": "0.1.0",
   "SupportedDriverVersion": "0.6.6.2",
-  "RepositoryUrl": "local",
+  "RepositoryUrl": "https://github.com/soestin/PenDragScrollPlugin",
+  "WikiUrl": "https://github.com/soestin/PenDragScrollPlugin#readme",
   "LicenseIdentifier": "MIT"
 }

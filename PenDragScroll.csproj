@@ -4,9 +4,26 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>PenDragScroll</AssemblyName>
+    <RootNamespace>PenDragScroll</RootNamespace>
+    <Authors>Justin</Authors>
+    <Company>soestin</Company>
+    <Product>Pen Drag Scroll</Product>
+    <Description>OpenTabletDriver plugin that turns a pen button into drag-to-scroll on Linux and Windows.</Description>
+    <PackageProjectUrl>https://github.com/soestin/PenDragScrollPlugin</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/soestin/PenDragScrollPlugin</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="OpenTabletDriver.Plugin" Version="0.6.6.2" ExcludeAssets="runtime" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="LICENSE" Pack="true" PackagePath="\" />
+    <None Include="metadata.json" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>
