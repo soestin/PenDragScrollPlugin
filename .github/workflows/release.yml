@@ -32,13 +32,13 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p release/PenDragScroll
-          cp bin/Release/net8.0/PenDragScroll.dll release/PenDragScroll/
-          cp metadata.json release/PenDragScroll/
-          cp LICENSE release/PenDragScroll/
-          cp README.md release/PenDragScroll/
+          mkdir -p release
+          cp bin/Release/net8.0/PenDragScroll.dll release/
+          cp metadata.json release/
+          cp LICENSE release/
+          cp README.md release/
           cd release
-          zip -r PenDragScroll-${GITHUB_REF_NAME}.zip PenDragScroll
+          zip -r PenDragScroll-${GITHUB_REF_NAME}.zip PenDragScroll.dll metadata.json LICENSE README.md
 
       - name: Create GitHub release
         uses: softprops/action-gh-release@v2
